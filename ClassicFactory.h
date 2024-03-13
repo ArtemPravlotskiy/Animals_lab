@@ -14,35 +14,36 @@
 
 class AnimalFactory {
   public:
-    [[nodiscard]] virtual Animal* createAnimal() const = 0;
+    [[nodiscard]] virtual Animal *createAnimal(int age, std::string pet_name, Owner *owner) const = 0;
+
     virtual ~AnimalFactory() = default;
 };
 
 class CatFactory final : public AnimalFactory {
   public:
-    [[nodiscard]] Animal* createAnimal() const override {
-        return new Cat;
+    [[nodiscard]] Animal* createAnimal(const int age, const std::string pet_name, Owner *owner) const override {
+        return new Cat(age, pet_name, owner);
     }
 };
 
 class DogFactory final : public AnimalFactory {
 public:
-    [[nodiscard]] Animal* createAnimal() const override {
-        return new Dog;
+    [[nodiscard]] Animal* createAnimal(const int age, const std::string pet_name, Owner *owner) const override {
+        return new Dog(age, pet_name, owner);
     }
 };
 
 class FishFactory final : public AnimalFactory {
 public:
-    [[nodiscard]] Animal* createAnimal() const override {
-        return new Fish;
+    [[nodiscard]] Animal* createAnimal(const int age, const std::string pet_name, Owner *owner) const override {
+        return new Fish(age, pet_name, owner);
     }
 };
 
 class ParrotFactory final : public AnimalFactory {
 public:
-    [[nodiscard]] Animal* createAnimal() const override {
-        return new Parrot;
+    [[nodiscard]] Animal* createAnimal(const int age, const std::string pet_name, Owner *owner) const override {
+        return new Parrot(age, pet_name, owner);
     }
 };
 
