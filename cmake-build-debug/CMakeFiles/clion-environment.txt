@@ -1,5 +1,3 @@
-ToolSet: 11.0 w64 (local)@C:\Users\pravl\AppData\Local\Programs\CLion Nova\bin\mingw
-Ninja: 1.11.1@C:\Users\pravl\AppData\Local\Programs\CLion Nova\bin\ninja\win\x64\ninja.exe
-Options: 
+ToolSet: Ubuntu 22.04.2 LTS (remote)Options: 
 
-Options:-DCMAKE_MAKE_PROGRAM=C:/Users/pravl/AppData/Local/Programs/CLion Nova/bin/ninja/win/x64/ninja.exe
+Options:

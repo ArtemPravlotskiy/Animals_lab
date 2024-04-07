@@ -16,7 +16,8 @@
 using namespace std;
 
 vector<Owner*> owners;
-vector<Animal*> animals;
+/*vector<Animal*> animals;*/
+CompositeAnimal* animalss = new CompositeAnimal;
 
 void Input();
 void StartMenu();
@@ -158,7 +159,7 @@ void Input () {
             }*/
 
             // my Factory
-            if (specie == "Cat") {
+            /*if (specie == "Cat") {
                 animals.emplace_back(Factory::create_t<Cat>(stoi(age), pet_name, *it_owner));
             } else if (specie == "Dog") {
                 animals.emplace_back(Factory::create_t<Dog>( stoi(age), pet_name, *it_owner));
@@ -170,7 +171,21 @@ void Input () {
                 throw string("Unknown specie");
             }
 
-            (*it_owner)->AddPet(animals.back());
+            (*it_owner)->AddPet(animals.back());*/
+
+            if (specie == "Cat") {
+                animalss->addAnimal(Factory::create_t<Cat>(stoi(age), pet_name, *it_owner));
+            } else if (specie == "Dog") {
+                animalss->addAnimal(Factory::create_t<Dog>( stoi(age), pet_name, *it_owner));
+            } else if (specie == "Fish") {
+                animalss->addAnimal(Factory::create_t<Fish>( stoi(age), pet_name, *it_owner));
+            } else if (specie == "Parrot") {
+                animalss->addAnimal(Factory::create_t<Parrot>( stoi(age), pet_name, *it_owner));
+            } else {
+                throw string("Unknown specie");
+            }
+
+            (*it_owner)->AddPet(animalss->back());
 
         } catch (string& error) {
             cout << "\nError: " << error << endl;
@@ -290,6 +305,7 @@ void MakeSound() {
 
 void MakeAllPetsSound() {
     cout << "\n";
+    auto animals = animalss->getAnimals();
     for (const auto pet : animals) {
         if (!pet->GetName().empty()) {
             cout << pet->GetName() << " ";
@@ -371,6 +387,7 @@ void StartMenu() {
 }
 
 Animal* FindByID(const int &ID) {
+    auto animals = animalss->getAnimals();
     for (const auto animal : animals) {
         if (ID == animal->GetID()) {
             return animal;
@@ -392,8 +409,6 @@ void Delete() {
     }
 
     /// Animals delete
-    animals.clear();
-    /*for (const auto x : animals) {
-        delete x;
-    }*/
+    /// Owner also delete all of his animal, so we should only clear animals vector
+    //animals.clear();
 }

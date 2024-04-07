@@ -112,6 +112,18 @@
 		<Unit filename="/mnt/c/Users/pravl/CLionProjects/lab01/Animals/Parrot.h">
 			<Option target="lab01"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/pravl/CLionProjects/lab01/ClassicFactory.cpp">
+			<Option target="lab01"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/pravl/CLionProjects/lab01/ClassicFactory.h">
+			<Option target="lab01"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/pravl/CLionProjects/lab01/Factory.cpp">
+			<Option target="lab01"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/pravl/CLionProjects/lab01/Factory.h">
+			<Option target="lab01"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/pravl/CLionProjects/lab01/Owner.cpp">
 			<Option target="lab01"/>
 		</Unit>

@@ -249,6 +249,54 @@ Animals/Parrot.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab01.dir/build.make CMakeFiles/lab01.dir/Animals/Parrot.cpp.s
 .PHONY : Animals/Parrot.cpp.s
 
+ClassicFactory.o: ClassicFactory.cpp.o
+.PHONY : ClassicFactory.o
+
+# target to build an object file
+ClassicFactory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab01.dir/build.make CMakeFiles/lab01.dir/ClassicFactory.cpp.o
+.PHONY : ClassicFactory.cpp.o
+
+ClassicFactory.i: ClassicFactory.cpp.i
+.PHONY : ClassicFactory.i
+
+# target to preprocess a source file
+ClassicFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab01.dir/build.make CMakeFiles/lab01.dir/ClassicFactory.cpp.i
+.PHONY : ClassicFactory.cpp.i
+
+ClassicFactory.s: ClassicFactory.cpp.s
+.PHONY : ClassicFactory.s
+
+# target to generate assembly for a file
+ClassicFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab01.dir/build.make CMakeFiles/lab01.dir/ClassicFactory.cpp.s
+.PHONY : ClassicFactory.cpp.s
+
+Factory.o: Factory.cpp.o
+.PHONY : Factory.o
+
+# target to build an object file
+Factory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab01.dir/build.make CMakeFiles/lab01.dir/Factory.cpp.o
+.PHONY : Factory.cpp.o
+
+Factory.i: Factory.cpp.i
+.PHONY : Factory.i
+
+# target to preprocess a source file
+Factory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab01.dir/build.make CMakeFiles/lab01.dir/Factory.cpp.i
+.PHONY : Factory.cpp.i
+
+Factory.s: Factory.cpp.s
+.PHONY : Factory.s
+
+# target to generate assembly for a file
+Factory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab01.dir/build.make CMakeFiles/lab01.dir/Factory.cpp.s
+.PHONY : Factory.cpp.s
+
 Owner.o: Owner.cpp.o
 .PHONY : Owner.o
 
@@ -321,6 +369,12 @@ help:
 	@echo "... Animals/Parrot.o"
 	@echo "... Animals/Parrot.i"
 	@echo "... Animals/Parrot.s"
+	@echo "... ClassicFactory.o"
+	@echo "... ClassicFactory.i"
+	@echo "... ClassicFactory.s"
+	@echo "... Factory.o"
+	@echo "... Factory.i"
+	@echo "... Factory.s"
 	@echo "... Owner.o"
 	@echo "... Owner.i"
 	@echo "... Owner.s"
